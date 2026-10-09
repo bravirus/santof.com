@@ -51,16 +51,36 @@ h1{font-size:clamp(3rem,10vw,5rem);font-weight:800;line-height:1;margin-bottom:.
 .contact-link{display:inline-block;margin-top:1rem;color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem}
 .footer{text-align:center;padding:1.5rem;font-size:.78rem;color:var(--muted)}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.trust{flex-direction:column;align-items:center;gap:1rem}}
+
+/* ===== Sale / discount styling ===== */
+.sale-banner{background:linear-gradient(90deg,#e11d48,#f59e0b);color:#fff;text-align:center;padding:.7rem 1rem;font-size:.85rem;font-weight:800;letter-spacing:.02em;animation:salepulse 2s ease-in-out infinite}
+@keyframes salepulse{0%,100%{opacity:1}50%{opacity:.8}}
+.price-box{position:relative;overflow:hidden}
+.sale-ribbon{position:absolute;top:14px;right:-34px;background:#e11d48;color:#fff;font-size:.72rem;font-weight:800;padding:.28rem 2.6rem;transform:rotate(45deg);letter-spacing:.03em;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.price-old{font-size:1.25rem;color:var(--muted);text-decoration:line-through;opacity:.7;margin-bottom:.15rem}
+.price-save{display:inline-block;margin-top:.5rem;font-size:.8rem;font-weight:800;color:#fff;background:#16a34a;padding:.25rem .8rem;border-radius:2rem}
+.urgency{color:#e11d48;font-weight:700;font-size:.9rem;margin:0 auto 1.6rem;max-width:420px}
+.cta-flash{display:inline-block;background:#e11d48;color:#fff;font-size:.68rem;font-weight:800;padding:.2rem .6rem;border-radius:.4rem;margin-left:.5rem;vertical-align:middle}
 </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z974BMEM1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9Z974BMEM1');
+</script>
 </head>
 <body>
+<div class="sale-banner">🔥 LIMITED-TIME OFFER · 61% OFF · Was $1,800 → Now $699</div>
 <div class="hero">
   <div class="pill">Brandable 6-Letter Premium Domain</div>
   <h1>Santof</h1>
   <p class="ext">.com</p>
   <p class="tagline">Short, memorable, and versatile. A premium brandable domain ready for your next big venture.</p>
-  <div class="price-box"><div class="price-label">Buy Now Price</div><div class="price">$1,800</div></div>
-  <a class="cta" href="https://checkoutlink.godaddy.com/1fff6bbc-0e40-465f-8c8f-2bcf4d4284c2" target="_blank">Buy This Domain</a>
+  <div class="price-box"><div class="sale-ribbon">61% OFF</div><div class="price-label">Limited-Time Price</div><div class="price-old">$1,800</div><div class="price">$699</div><div class="price-save">You save $1,101</div></div>
+  <div class="urgency">⏰ Flash sale — was $1,800, now $699. Price returns after the offer ends.</div>
+  <a class="cta" href="https://checkoutlink.godaddy.com/e147d1f2-1a23-4bef-a595-cc0dc297ea10" target="_blank">Buy This Domain</a>
 </div>
 <div class="section">
   <h2 class="section-title">Domain Specs</h2>
@@ -117,8 +137,8 @@ h1{font-size:clamp(3rem,10vw,5rem);font-weight:800;line-height:1;margin-bottom:.
 <div class="cta-section">
   <h2>Make Santof.com yours</h2>
   <p>Your brand's perfect name is one click away.</p>
-  <a class="cta" href="https://checkoutlink.godaddy.com/1fff6bbc-0e40-465f-8c8f-2bcf4d4284c2" target="_blank">Buy Now — $1,800</a><br>
-  <a class="contact-link" href="mailto:rue77n3@gmail.com">Or contact us to make an offer →</a>
+  <a class="cta" href="https://checkoutlink.godaddy.com/e147d1f2-1a23-4bef-a595-cc0dc297ea10" target="_blank">Buy Now — $699<span class="cta-flash">61% OFF</span></a><br>
+  <a class="contact-link" href="mailto:contact@youremail.com">Or contact us to make an offer →</a>
 </div>
 <div class="footer">&copy; 2026 &middot; Santof.com &middot; Premium Domain For Sale</div>
 <script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})})</script>
@@ -146,6 +166,17 @@ document.querySelectorAll(".contact-link").forEach(function(link){
       });
     }
   });
+});
+</script>
+<script>
+window.addEventListener('load', function() {
+  if (window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count({
+      path: 'visit-santof',
+      title: 'Visit: santof',
+      event: true
+    });
+  }
 });
 </script>
 </body>
